@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Index } from "./01-AdminPacientes/components";
 import Header from "./Drawer";
+import { Presupuesto } from "./02-Presupuesto/components/Presupuesto";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,8 +30,8 @@ function App() {
         <Container maxWidth="md" className={classes.root}>
           <Switch>
             <Route exact path="/index" component={Index} />
-            {/* <Route exact path="/products/new" component={NewProducts} />
-            <Route exact path="/products/edit/:id" component={EditProduct} /> */}
+            <Route exact path="/presupuesto" component={Presupuesto} />
+            {/* <Route exact path="/products/edit/:id" component={EditProduct} /> */}
           </Switch>
         </Container>
 

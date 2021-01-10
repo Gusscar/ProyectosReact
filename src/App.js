@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, Container } from "@material-ui/core";
+
+import theme from "./ThemaConfig";
+import { makeStyles } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Index } from "./01-AdminPacientes/components";
+import Header from "./Drawer";
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    marginTop: '20px',
+    display: "flex",
+    justifyContent: "center",
+  },
+
+
+}));
+
 
 function App() {
+
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+
+        <Header/>
+        <Container maxWidth="md" className={classes.root}>
+          <Switch>
+            <Route exact path="/index" component={Index} />
+            {/* <Route exact path="/products/new" component={NewProducts} />
+            <Route exact path="/products/edit/:id" component={EditProduct} /> */}
+          </Switch>
+        </Container>
+
+
+      </Router>
+    </ThemeProvider>
+
+
   );
 }
 

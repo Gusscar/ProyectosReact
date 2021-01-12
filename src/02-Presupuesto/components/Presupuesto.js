@@ -16,8 +16,6 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
 
-
-
     center: {
         textAlign: 'center'
     },

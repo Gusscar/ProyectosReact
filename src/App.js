@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Index } from "./01-AdminPacientes/components";
 import Header from "./Drawer";
 import { Presupuesto } from "./02-Presupuesto/components/Presupuesto";
+import { Cotizador } from "./03-Cotizador/components/Cotizador";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +32,7 @@ function App() {
           <Switch>
             <Route exact path="/index" component={Index} />
             <Route exact path="/presupuesto" component={Presupuesto} />
-            {/* <Route exact path="/products/edit/:id" component={EditProduct} /> */}
+            <Route exact path="/cotizador" component={Cotizador} />
           </Switch>
         </Container>
 

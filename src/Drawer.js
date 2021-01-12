@@ -17,6 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import { useHistory, withRouter } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -95,11 +96,11 @@ const useStyles = makeStyles((theme) => ({
           icon: <MonetizationOnIcon />,
           onClick: () => history.push("/presupuesto")
         },
-        // {
-        //   text: "Contact",
-        //   icon: <MailIcon />,
-        //   onClick: () => history.push("/contact")
-        // }
+        {
+          text: "Cotizador",
+          icon: <AccountBalanceIcon />,
+          onClick: () => history.push("/cotizador")
+        }
       ];
 
     const handleDrawerOpen = () => {
